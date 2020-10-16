@@ -72,7 +72,7 @@ class CurrentWeather extends React.Component {
                             <p>{result.description}</p>
                           
                             <div>
-                                <img src={"http://openweathermap.org/img/wn/"+result.icon+"@2x.png"}/>
+                                <img src={"http://openweathermap.org/img/wn/"+result.icon+"@2x.png"} alt="current_weather_icon"/>
                                 <h1>{main.temp}°</h1>
                             </div>
 

@@ -83,3 +83,44 @@
 }
 
 
+
+
+.each_forecast{
+    background-color: lightblue;
+    padding: 0;
+    margin: 1rem 8%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+.each_forecast div{
+    color: grey;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.each_forecast div img{
+    height: 3rem;
+}
+.each_forecast div p{
+    font-size: small;
+}
+.each_forecast div h2{
+    color: black;
+}
+
+.data_time {
+    margin: 0;
+    padding: 0;
+}
+.data_time h3{
+    margin: 0;
+    padding: 0;
+}
+.data_time p{
+    margin: 0;
+    padding: 0;
+}
