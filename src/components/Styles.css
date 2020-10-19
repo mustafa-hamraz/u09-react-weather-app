@@ -1,9 +1,10 @@
+/*Current Weather Component - START */
 .current_weather_div{
     width: 100%;
     display: flex;
     flex-flow: row;
+    padding-top: 3rem;
 }
-
 .left_side_div{
     padding-top: 3%;
     padding-left: 8%;
@@ -40,7 +41,6 @@
     color: black;
 }
 
-
 .right_side_info{
     width: 60%;
     color: gray;
@@ -59,8 +59,7 @@
     margin-bottom: 0.3rem;
     margin-left: 1rem;
 }
-
-
+/*Current Weather Component - END */
 
 
 @media screen and (max-width: 600px) {
@@ -84,7 +83,7 @@
 
 
 
-
+/* Five Day forecast Component - START */
 .each_forecast{
     background-color: lightblue;
     padding: 0;
@@ -123,4 +122,123 @@
 .data_time p{
     margin: 0;
     padding: 0;
+}
+/* Five Day forecast Component - END */
+
+
+
+/* Home Page Component - START */
+.home_page{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(246, 230, 201, 0.863);
+}
+.sweden_img{
+    background: url('/images/sweden.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vh;
+    width: 50vh;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sweden_img #lulea{
+    height: 32%;
+    width: 100%;
+}
+.sweden_img #umea{
+    height: 15%;
+    width: 100%;
+}
+.sweden_img #harnosand{
+    height: 10%;
+    width: 100%;
+}
+.sweden_img #gavle{
+    height: 8%;
+    width: 100%;
+}
+.sweden_img #uppsala{
+    height: 5%;
+    width: 100%;
+}
+.sweden_img #stockholm{
+    height: 6%;
+    width: 100%;
+}
+.sweden_img #nykoping{
+    height: 5%;
+    width: 100%;
+}
+.sweden_img #goteborg{
+    height: 7%;
+    width: 100%;
+}
+.sweden_img #halmstad{
+    height: 5%;
+    width: 100%;
+}
+.sweden_img #malmo{
+    height: 7%;
+    width: 100%;
+}
+
+#lulea:hover, #umea:hover, #harnosand:hover,
+#gavle:hover, #uppsala:hover, #stockholm:hover, #nykoping:hover, 
+#goteborg:hover, #halmstad:hover, #malmo:hover
+{
+    background-color: rgba(246, 230, 201, 0.294);
+    cursor: pointer;
+}
+/* Home Page Component - END */
+
+
+
+/* Nav Component - START */
+.nav_bar{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    margin-top: 1rem;
+}
+.nav_bar li{
+    color: rgb(9, 6, 195);
+    list-style: none;
+    margin-left: 2rem;
+    font-size: medium;
+    font-weight: bold;
+}
+/* Nav Component - END */
+
+.search_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+.search_input{
+    height: 5vh;
+    width: 40vh;
+    padding-left: 1rem;
+
+}
+.search_submit{
+    height: 6.5vh;
+    width: 10vh;
+    background-color: rgb(9, 6, 195);
+    color: white;
+    border: none;
+    border-radius:  5px;
+    margin-left: 0.5rem;
+
 }

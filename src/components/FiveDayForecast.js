@@ -11,7 +11,7 @@ class FiveDayForecast extends React.Component {
         };
     }
     componentDidMount(){
-        fetch("https://api.openweathermap.org/data/2.5/forecast?q=stockholm&appid=16ce40370539cf4b81309fbb19b4fcda&units=metric&lang=sv")
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q="+this.props.city+"&appid=16ce40370539cf4b81309fbb19b4fcda&units="+this.props.unit+"&lang=sv")
         .then(res => res.json())
         .then( json => {
             this.setState({
@@ -39,14 +39,6 @@ class FiveDayForecast extends React.Component {
             let date = new Date(unix*1000).toLocaleDateString("sv-SE");
             return date;
         }
-
-        /*
-        //handelTemp() is a function that rounds up the tempereture
-        function handelTemp(temp){
-     
-            let mm = toString(temp).split(",");
-            return mm;
-        }*/
         
 
         if (!is_loaded){
@@ -74,7 +66,7 @@ class FiveDayForecast extends React.Component {
                                     </div>
 
                                     <div> 
-                                        <h2>{ each_forecast.main.temp }°</h2>
+                                        <h2>{ Math.round(each_forecast.main.temp) }°</h2>
                                     </div>
 
                                 </div>

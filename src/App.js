@@ -1,16 +1,25 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import CurrentWeather from './components/CurrentWeather.js'
-import FiveDayForecast from './components/FiveDayForecast.js'
+import HomePage from './components/HomePage.js';
+import Nav from './components/Nav.js';
+import Search from './components/Search.js';
+
+
 
 function App() {
   return (
-    <div>
-      <CurrentWeather city="Södertälje" unit="metric"/>
-      <FiveDayForecast />
-    </div>
-    
+    <BrowserRouter>
+      <div>
+        <Nav />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/search" component={Search} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+   
   );
 }
 

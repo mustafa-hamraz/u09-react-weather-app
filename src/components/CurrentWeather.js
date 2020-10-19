@@ -1,6 +1,9 @@
 import React from 'react';
 import './Styles.css';
 
+import FiveDayForecast from './FiveDayForecast.js'
+
+
 class CurrentWeather extends React.Component {
     constructor(props){
         super(props);
@@ -12,7 +15,7 @@ class CurrentWeather extends React.Component {
             main: [],
             wind: [],
             sys: [],
-            is_loaded: false,    
+            is_loaded: false, 
         };
     }
 
@@ -29,10 +32,11 @@ class CurrentWeather extends React.Component {
                 weather: json.weather,
                 main: json.main,
                 wind: json.wind,
-                sys: json.sys,              
+                sys: json.sys,          
             })
         })
     }
+
 
     render(){
         const { is_loaded, name, date, weather, main, wind, sys} = this.state;
@@ -60,49 +64,47 @@ class CurrentWeather extends React.Component {
         else{
 
             return (
-                <div className="current_weather_div">
+                <div>
+                    <div className="current_weather_div">
 
-                    
-                    {weather.map(result => (
-                                      
-                        <div className="left_side_div" key={result.id}>
+                        {weather.map(result => (
+                                        
+                            <div className="left_side_div" key={result.id}>
+                                
+                                <h2>{name}, {sys.country}</h2>
+                                <p>{handelDate(date)}</p>
+                                <p>{result.description}</p>
                             
-                            <h2>{name}, Sverige</h2>
-                            <p>{handelDate(date)}</p>
-                            <p>{result.description}</p>
-                          
-                            <div>
-                                <img src={"http://openweathermap.org/img/wn/"+result.icon+"@2x.png"} alt="current_weather_icon"/>
-                                <h1>{main.temp}°</h1>
+                                <div>
+                                    <img src={"http://openweathermap.org/img/wn/"+result.icon+"@2x.png"} alt="current_weather_icon"/>
+                                    <h1>{main.temp}°</h1>
+                                </div>
+
                             </div>
+                        ))}
 
+                        <div className="right_side_info">
+                            <div>
+                                <li>Maximum Temperatur:  {main.temp_max}°</li>
+                                <li>Minimum Temperatur:  {main.temp_min}°</li>    
+                                <li>Känns som:  {main.feels_like}°</li>
+
+                            </div>
+                            <div>
+                                <li>Vindhastighet:  {wind.speed} m/s</li>
+                                <li>Soluppgång:  {handelTime(sys.sunrise)}</li>
+                                <li>Solnedgång:  {handelTime(sys.sunset)}</li>
+                            </div>
                         </div>
-                    ))}
 
-                    <div className="right_side_info">
-                        <div>
-                            <li>Maximum Temperatur:  {main.temp_max}°</li>
-                            <li>Minimum Temperatur:  {main.temp_min}°</li>    
-                            <li>Känns som:  {main.feels_like}°</li>
-
-                        </div>
-                        <div>
-                            <li>Vindhastighet:  {wind.speed} m/s</li>
-                            <li>Soluppgång:  {handelTime(sys.sunrise)}</li>
-                            <li>Solnedgång:  {handelTime(sys.sunset)}</li>
-                        </div>
-
-    
                     </div>
-                    
-                    
-                    
-                </div>
+
+                    <FiveDayForecast city={this.props.city} unit={this.props.unit} />
+
+                </div>           
             );
         }
-        
     }
-
 }
   
 export default CurrentWeather;
