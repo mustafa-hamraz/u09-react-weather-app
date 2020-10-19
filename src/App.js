@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import HomePage from './components/HomePage.js';
 import Nav from './components/Nav.js';
+import HomePage from './components/HomePage.js';
 import Search from './components/Search.js';
 
 

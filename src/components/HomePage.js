@@ -1,7 +1,6 @@
 import React from 'react';
 import './Styles.css';
 import CurrentWeather from './CurrentWeather.js';
-import Background from './images/sweden.png';
 
 
 
@@ -31,7 +30,7 @@ class HomePage extends React.Component {
         if (!map_clicked){
             return(
                 <div className="home_page">
-                    <div className="sweden_img" style={{backgroundImage: "url("+Background+")"}}>
+                    <div className="sweden_img" style={{ backgroundImage: `url(${require("./images/sweden.png")})` }}>
                         <div id="lulea" onClick={ this.handel_map_click.bind(this, "luleå") }></div>
                         <div id="umea" onClick={ this.handel_map_click.bind(this, "umeå") }></div>
                         <div id="harnosand" onClick={ this.handel_map_click.bind(this, "härnösand") }></div>
