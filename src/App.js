@@ -14,8 +14,8 @@ function App() {
       <div>
           <Nav />
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/search" component={Search} />
+            <Route path="./" exact component={HomePage} />
+            <Route path="./search" component={Search} />
           </Switch>
       </div>
     </BrowserRouter>
