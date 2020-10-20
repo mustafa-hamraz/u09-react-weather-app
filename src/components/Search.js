@@ -1,6 +1,7 @@
 import React from 'react';
 import './Styles.css';
 import CurrentWeather from './CurrentWeather.js';
+import ErrorBoundary from './ErrorBoundary.js';
 
 class Search extends React.Component {
   constructor(props) {
@@ -29,9 +30,13 @@ class Search extends React.Component {
   }
 
   render() {
-
     if(this.state.is_loaded === true){
-      return <CurrentWeather city={this.state.value} unit={"metric"} />
+      return (
+        <ErrorBoundary>
+              <CurrentWeather city={this.state.value || "stockholm"} unit={"metric"} />    
+        </ErrorBoundary>
+      
+      );
     }else{
       return (
         <form className="search_form" onSubmit={this.handleSubmit}>
@@ -40,6 +45,8 @@ class Search extends React.Component {
         </form>
       );
     }
+  
+    
     
   }
 }

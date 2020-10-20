@@ -1,7 +1,8 @@
 import React from 'react';
 import './Styles.css';
 
-import FiveDayForecast from './FiveDayForecast.js'
+import FiveDayForecast from './FiveDayForecast.js';
+import ErrorBoundary from './ErrorBoundary.js';
 
 
 class CurrentWeather extends React.Component {
@@ -22,7 +23,7 @@ class CurrentWeather extends React.Component {
    
 
     componentDidMount(){
-        fetch("https://api.openweathermap.org/data/2.5/weather?q="+this.props.city+"&appid=16ce40370539cf4b81309fbb19b4fcda&units="+this.props.unit+"&lang=sv")
+        fetch("https://api.openweathermap.org/data/2.5/weather?q="+ this.props.city +"&appid=16ce40370539cf4b81309fbb19b4fcda&units="+this.props.unit+"&lang=sv")
         .then(res => res.json())
         .then( json => {
             this.setState({
@@ -59,7 +60,7 @@ class CurrentWeather extends React.Component {
         
 
         if (!is_loaded){
-            return <div>Loading...</div>
+            return <div className="loading_api">Loading...</div>
         }
         else{
 
@@ -99,8 +100,9 @@ class CurrentWeather extends React.Component {
 
                     </div>
 
-                    <FiveDayForecast city={this.props.city} unit={this.props.unit} />
-
+                    <ErrorBoundary>
+                        <FiveDayForecast city={this.props.city ||"stockholm"} unit={this.props.unit ||"metric"} />
+                    </ErrorBoundary>
                 </div>           
             );
         }

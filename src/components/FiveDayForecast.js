@@ -42,7 +42,7 @@ class FiveDayForecast extends React.Component {
         
 
         if (!is_loaded){
-            return <div>Loading...</div>
+            return <div className="loading_api">Loading...</div>
         }
         else{
            return (
