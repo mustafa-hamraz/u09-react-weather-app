@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Styles.css';
+import {FaSearchLocation, FaHome } from 'react-icons/fa';
 
 class Nav extends React.Component{
     constructor(props){
@@ -41,16 +42,16 @@ class Nav extends React.Component{
 
                 <div onClick={this.handle_home_click} >
                     <Link to="/u09-react-weather-app/">
-                        <li className={this.state.home_classname}>Hem</li>
+                        <li className={this.state.home_classname}><FaHome/><p>Hem</p></li>
                     </Link>
                 </div>
                 
 
-            <div onClick={this.handle_search_click} >
-                <Link to="/u09-react-weather-app/search" >
-                    <li className={this.state.search_classname}>Söka</li>
-                </Link>
-            </div>
+                <div onClick={this.handle_search_click} >
+                    <Link to="/u09-react-weather-app/search" >
+                        <li className={this.state.search_classname}><FaSearchLocation/><p>Söka</p></li>
+                    </Link>
+                </div>
                
 
             </nav>

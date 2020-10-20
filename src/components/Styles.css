@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-flow: row;
-    padding-top: 3rem;
+    padding-top: 4rem;
 }
 .left_side_div{
     padding-top: 3%;
@@ -154,6 +154,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(243, 243, 212);
+    margin-bottom: 3rem;
 }
 
 .sweden_img #lulea{
@@ -221,8 +222,15 @@
     color: rgb(15, 12, 160);
     list-style: none;
     margin-left: 2rem;
-    font-size: medium;
+    font-size: 2rem;
     font-weight: bold;
+}
+.nav_bar li p{
+    margin: 0;
+    padding: 0%;
+    font-size: 0.7rem;
+    text-align: center;
+
 }
 .home_not_clicked, .search_not_clicked{
     display: block;
@@ -233,11 +241,14 @@
 
 /* Nav Component - END */
 
+
+/* Search Component - START */
 .search_form{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 3rem;
+    height: 80vh;
 }
 .search_input{
     height: 5vh;
@@ -248,10 +259,42 @@
 .search_submit{
     height: 6.5vh;
     width: 10vh;
-    background-color: rgb(9, 6, 195);
+    background-color: #00528c;
     color: white;
     border: none;
     border-radius:  5px;
     margin-left: 0.5rem;
+}
+/* Search Component - END */
+
+
+
+
+/* Footer Component - START */
+.footer_div{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 57, 97);
+    color: rgb(246, 246, 199);
+}
+.footer_div p {
+    font-size: 0.7rem;
+}
+.footer_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    background-color: rgb(0, 57, 97);
+    color: rgb(246, 246, 199);
 
 }
+.footer_section div a {
+    color: rgb(246, 246, 199);
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+/* Footer Component - END */
