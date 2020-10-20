@@ -40,14 +40,14 @@ class Nav extends React.Component{
             <nav className="nav_bar">
 
                 <div onClick={this.handle_home_click} >
-                    <Link to="/">
+                    <Link to="/u09-react-weather-app/">
                         <li className={this.state.home_classname}>Hem</li>
                     </Link>
                 </div>
                 
 
             <div onClick={this.handle_search_click} >
-                <Link to="/search" >
+                <Link to="/u09-react-weather-app/search" >
                     <li className={this.state.search_classname}>Söka</li>
                 </Link>
             </div>

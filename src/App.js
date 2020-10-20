@@ -14,8 +14,8 @@ function App() {
       <div>
           <Nav />
           <Switch>
-            <Route path="./" exact component={HomePage} />
-            <Route path="./search" component={Search} />
+            <Route path="/u09-react-weather-app/" exact component={HomePage} />
+            <Route path="/u09-react-weather-app/search" component={Search} />
           </Switch>
       </div>
     </BrowserRouter>
