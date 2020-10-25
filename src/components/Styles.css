@@ -69,27 +69,7 @@
 /*Current Weather Component - END */
 
 
-@media screen and (max-width: 600px) {
-    .current_weather_div {
-        flex-flow: column;
-    }
-    .left_side_div{
-        width: 100%;
-    }
-    .right_side_info{
-        width: 100%;
-        justify-content: flex-start;
-        padding-left: 4%;
 
-    }
-    .right_side_info li{
-        font-size: 0.8rem;
-        
-    }
-    .search_form{
-        padding-top: 8rem;
-    }
-}
 
 
 
@@ -260,6 +240,10 @@
 
 }
 .search_submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
     height: 6.5vh;
     width: 10vh;
     background-color: #00528c;
@@ -301,3 +285,38 @@
     margin: 0.5rem;
 }
 /* Footer Component - END */
+
+@media screen and (max-width: 600px) {
+    .current_weather_div {
+        flex-flow: column;
+    }
+    .left_side_div{
+        width: 100%;
+    }
+    .right_side_info{
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 4%;
+
+    }
+    .right_side_info li{
+        font-size: 0.8rem;
+        
+    }
+    .search_form{
+        padding-top: 30%;
+    }
+    .search_input{
+        height: 10vh;
+        width: 80vh;
+    }
+    .search_submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        height: 13vh;
+        width: 15vh;
+    }
+
+}

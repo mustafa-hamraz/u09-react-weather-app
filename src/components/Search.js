@@ -3,6 +3,8 @@ import './Styles.css';
 import CurrentWeather from './CurrentWeather.js';
 import ErrorBoundary from './ErrorBoundary.js';
 
+import { AiOutlineSearch } from 'react-icons/ai';
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +43,7 @@ class Search extends React.Component {
       return (
         <form className="search_form" onSubmit={this.handleSubmit}>
           <input className="search_input" type="text" value={this.state.value} onChange={this.handleChange} placeholder="t.ex. Barcelona"/>
-          <input className="search_submit" type="submit" value="Söka" />
+          <div className="search_submit" type="submit" ><AiOutlineSearch /></div>
         </form>
       );
     }
