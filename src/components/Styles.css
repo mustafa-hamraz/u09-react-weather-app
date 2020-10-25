@@ -307,15 +307,12 @@
         padding-top: 30%;
     }
     .search_input{
-        height: 10vh;
-        width: 80vh;
+        height: 8vh;
+        width: 50vh;
     }
     .search_submit{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: x-large;
-        height: 13vh;
+        font-size: xx-large;
+        height: 9vh;
         width: 15vh;
     }
 
